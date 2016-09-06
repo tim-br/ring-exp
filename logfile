@@ -1,0 +1,35 @@
+LOG:  database system was shut down at 2016-08-08 12:06:04 EDT
+LOG:  MultiXact member wraparound protections are now enabled
+LOG:  database system is ready to accept connections
+LOG:  autovacuum launcher started
+ERROR:  null value in column "created_at" violates not-null constraint
+DETAIL:  Failing row contains (1, null, hello, null, null).
+STATEMENT:  INSERT INTO tokens ( enc_token ) VALUES ( $1 ) RETURNING *
+ERROR:  column "user_id" of relation "tokens" does not exist at character 33
+STATEMENT:  INSERT INTO tokens ( enc_token, user_id ) VALUES ( $1, $2 ) RETURNING *
+ERROR:  syntax error at end of input at character 163
+STATEMENT:  CREATE TABLE tokens(
+	    id SERIAL PRIMARY KEY,
+	    description text,  enc_token text NOT NULL,  created_at timestamp,
+	      updated_at timestamp, user_id integer
+LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No space left on device
+LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No space left on device
+LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No space left on device
+LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No space left on device
+LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No space left on device
+LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No space left on device
+LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No space left on device
+LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No space left on device
+LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No space left on device
+LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No space left on device
+LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No space left on device
+LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No space left on device
+LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No space left on device
+LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No space left on device
+LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No space left on device
+LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No space left on device
+LOG:  received fast shutdown request
+LOG:  aborting any active transactions
+LOG:  autovacuum launcher shutting down
+LOG:  shutting down
+LOG:  database system is shut down
